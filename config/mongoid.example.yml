@@ -8,7 +8,7 @@
 # to place production specific settings there
 
 defaults: &defaults
-  host: localhost
+  uri: <%= ENV['MONGODB_URL'] %>
   identity_map_enabled: true
 
   # slaves:
@@ -19,17 +19,10 @@ defaults: &defaults
 
 development:
   <<: *defaults
-  database: errbit_development
 
 test:
   <<: *defaults
-  database: errbit_test
 
 # set these environment variables on your prod server
 production:
   <<: *defaults
-  host: <%= ENV['MONGOID_HOST'] %>
-  port: <%= ENV['MONGOID_PORT'] %>
-  username: <%= ENV['MONGOID_USERNAME'] %>
-  password: <%= ENV['MONGOID_PASSWORD'] %>
-  database: <%= ENV['MONGOID_DATABASE'] %>
