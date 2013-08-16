@@ -9,7 +9,18 @@
 [gemnasium-img-url]:https://gemnasium.com/errbit/errbit.png
 [gemnasium-url]:https://gemnasium.com/errbit/errbit
 
+### Deploying on Stackato
 
+To deploy on Stackato, run:
+
+    git clone https://github.com/Stackato-Apps/errbit
+    cd errbit
+    stackato push -n
+
+To login, use the following credentials:
+
+    email: errbit@errbit@example.com
+    password: password
 
 ### The open source, self-hosted error catcher
 
