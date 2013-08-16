@@ -1,0 +1,11 @@
+name: errbit
+framework:
+  type: buildpack
+services:
+  ${name}-mongo: mongodb
+env:
+  USE_ENV: 1
+hooks:
+  post-staging:
+    - bundle exec rake db:seed
+    - bundle exec rake errbit:demo
