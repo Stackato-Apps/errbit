@@ -4,7 +4,7 @@ default_config_file = Rails.root.join("config", "config.example.yml")
 # Allow a Rails Engine to override config by defining it earlier
 unless defined?(Errbit::Config)
   Errbit::Config = OpenStruct.new
-  use_env = ENV['HEROKU'] || ENV['USE_ENV']
+  use_env = ENV['HEROKU']
 
   # If Errbit is running on Heroku, config can be set from environment variables.
   if use_env
