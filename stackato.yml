@@ -1,11 +1,15 @@
 name: errbit
-framework:
-  type: buildpack
+buildpack: https://github.com/heroku/heroku-buildpack-ruby
+requirements:
+  ubuntu:
+    - libxml2-dev
+    - libxslt1-dev
 services:
   ${name}-mongo: mongodb
 env:
   USE_ENV: 1
 hooks:
   post-staging:
+    - $(echo "Errbit::Application.config.secret_token = '$(bundle exec rake secret)'" > config/initializers/secret_token.rb)
     - bundle exec rake db:seed
     - bundle exec rake errbit:demo
