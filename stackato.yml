@@ -1,0 +1,8 @@
+name: errbit
+
+requirements:
+  ubuntu:
+  - libxslt1-dev
+
+hooks:
+  pre-running: [ "export SECRET_TOKEN=$(bundle exec rake secret)" ]
