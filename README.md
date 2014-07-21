@@ -19,7 +19,7 @@ To deploy on Stackato, run:
 
 To login, use the following credentials:
 
-    email: errbit@errbit@example.com
+    email: errbit@errbit.example.com
     password: password
 
 ### The open source, self-hosted error catcher
