@@ -1,6 +1,6 @@
 applications:
 - name: errbit
-  buildpack: https://github.com/heroku/heroku-buildpack-ruby
+  mem: 512M
   services:
     ${name}-mongo:
       type: mongodb
