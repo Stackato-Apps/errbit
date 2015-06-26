@@ -14,3 +14,4 @@ applications:
         '$(bundle exec rake secret)'" > config/initializers/__secret_token.rb)
       - bundle exec rake db:seed
       - bundle exec rake errbit:demo
+  timeout: 180
