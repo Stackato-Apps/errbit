@@ -33,6 +33,8 @@ gem 'errbit_github_plugin'
 
 gem 'dotenv-rails'
 
+gem 'fabrication'
+
 # Notification services
 # ---------------------------------------
 gem 'campy'
@@ -83,7 +85,6 @@ group :test do
   gem 'rspec-activemodel-mocks'
   gem 'rspec-its'
   gem 'mongoid-rspec', require: false
-  gem 'fabrication'
   gem 'capybara'
   gem 'poltergeist'
   gem 'launchy'
