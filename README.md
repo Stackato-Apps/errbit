@@ -66,11 +66,9 @@ Mailing List
 Join the Google Group at https://groups.google.com/group/errbit to receive
 updates and notifications.
 
-# Stackato
-To deploy on Stackato, run:
+# HPE Helion Stackato
+To deploy on HPE Helion Stackato, run:
 
-    git clone https://github.com/Stackato-Apps/errbit
-    cd errbit
     stackato push -n
 
 To login, use the credentials listed in the staging logs
