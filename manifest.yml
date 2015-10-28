@@ -1,6 +1,6 @@
 applications:
 - name: errbit
-  mem: 512M
+  memory: 512M
   services:
     ${name}-mongo:
       type: mongodb
